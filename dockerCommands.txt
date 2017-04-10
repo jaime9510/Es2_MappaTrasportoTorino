@@ -1,0 +1,20 @@
+sudo docker volume create datadb
+
+sudo docker build -t posgre-sql .
+
+sudo docker run -d -p 5432:5432 -v datadb:/datadb posgre-sql
+
+sudo docker stop <name>
+
+
+# Delete all containers
+sudo docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs sudo docker rm
+
+Remove volume
+sudo docker volume ls
+sudo docker volume rm datadb
+
+
+Remove image
+sudo docker rmi posgre-sql
+
