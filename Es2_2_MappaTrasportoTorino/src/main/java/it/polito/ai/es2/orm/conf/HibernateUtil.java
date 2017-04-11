@@ -31,7 +31,8 @@ public class HibernateUtil {
 				settings.put("hibernate.connection.password", "ai-user-password");
 				settings.put("hibernate.show_sql", "true");
 				settings.put("hibernate.hbm2ddl.auto", "validate");
-
+//				settings.put("hibernate.connection.pool_size", "20");
+ 
 				registryBuilder.applySettings(settings);
 
 				registry = registryBuilder.build();

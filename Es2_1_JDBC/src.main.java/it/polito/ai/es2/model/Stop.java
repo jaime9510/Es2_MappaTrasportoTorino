@@ -6,10 +6,10 @@ public class Stop {
 
 	private String id;
 	private String name;
-	private List<Integer> latLng;
+	private List<Double> latLng;
 	private List<String> lines;
 	
-	public Stop(String id, String name, List<Integer> latLng, List<String> lines) {
+	public Stop(String id, String name, List<Double> latLng, List<String> lines) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -36,11 +36,11 @@ public class Stop {
 		this.name = name;
 	}
 
-	public List<Integer> getLatLng() {
+	public List<Double> getLatLng() {
 		return latLng;
 	}
 
-	public void setLatLng(List<Integer> latLng) {
+	public void setLatLng(List<Double> latLng) {
 		this.latLng = latLng;
 	}
 

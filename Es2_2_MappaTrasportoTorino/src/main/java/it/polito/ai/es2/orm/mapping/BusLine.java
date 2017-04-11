@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+
 @Entity
 public class BusLine {
 
@@ -28,6 +30,8 @@ public class BusLine {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
+	@JsonIgnore
 	public List<BusLineStop> getBusLineStop() {
 		return busLineStop;
 	}

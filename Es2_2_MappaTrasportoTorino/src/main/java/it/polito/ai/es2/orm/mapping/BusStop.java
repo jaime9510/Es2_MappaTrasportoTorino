@@ -8,6 +8,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+
 @Entity
 public class BusStop {
 	
@@ -44,6 +46,8 @@ public class BusStop {
 	public void setLng(Double lng) {
 		this.lng = lng;
 	}
+	
+	@JsonIgnore
 	public List<BusLineStop> getBusLineStop() {
 		return busLineStop;
 	}
